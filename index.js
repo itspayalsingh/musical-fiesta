@@ -7,6 +7,6 @@ app.get("/",(req,res)=>{
 })
 
 
-app.listen(9090,()=>{
-    console.log("server is runnign on 9090");
+app.listen(5050,()=>{
+    console.log("server is runnign on 5050");
 })
