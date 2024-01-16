@@ -2,8 +2,8 @@ const express=require("express")
 const app= express()
 
 app.get("/",(req,res)=>{
-    console.log(req.ip);
-    res.send("nth")
+    console.log("ip",req.ip);
+    res.send("nth",req.ip)
 })
 
 
