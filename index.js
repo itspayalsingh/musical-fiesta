@@ -24,7 +24,7 @@ app.use(express.json())
 app.get('/', (req, res) => {
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   console.log('IP Address of the client is: ', ip);
-  fs.appendFileSync("./ans.txt",ip)
+  // fs.appendFileSync("./ans.txt",ip)
   res.send(ip);
 });
 
