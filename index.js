@@ -2,6 +2,7 @@ const express=require("express")
 const app= express()
 var ip = require('ip');
 const dns= require("dns")
+const fs=require("fs")
 // var ipLocation = require('ip-location')
 app.use(express.json()) 
  
@@ -23,6 +24,7 @@ app.use(express.json())
 app.get('/', (req, res) => {
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   console.log('IP Address of the client is: ', ip);
+  fs.appendFileSync("./ans.txt",ip)
   res.send('Hello World!',ip);
 });
 
